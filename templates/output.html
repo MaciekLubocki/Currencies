@@ -1,0 +1,14 @@
+{% extends "parent.html" %}
+{% block content %}
+<div class="content">
+<div class="title">Calculate<span>FX</span></div>  
+<div class="date"></div>
+ <div><label for="currency_to_enter"><b>Entered number:</b></label></div>       
+ <div class="result">{{ result }} {{ resulta }}</div>
+ <div><label for="currency_to_enter"><b>FX rate:</b></label></div>     
+ <div class="resultax">{{ resultax }} </div>
+ <div><label for="currency_to_enter"><b>Final amount:</b></label></div>     
+ <div class="resultax">{{ output|round(2, 'floor') }} PLN</div>
+    <form action="/" type="submit"><button>Back</button></form>  
+  </div>
+  {% endblock %} 

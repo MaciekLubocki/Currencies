@@ -1,0 +1,16 @@
+{% extends "parent.html" %}
+{% block content %}
+<form class="content" method="post" action="/output">
+  <div class="title">Calculate<span>FX</span></div>  
+  <div class="date">{{data_source}}</div>
+    <label for="currency_choose"><b>Choose from available currencies:</b></label>
+    <select name= "currencies" method="GET" action="/index.html">
+      {% for currency in currencies %}
+      <option value= "{{currency}}" SELECTED>{{ currency }}</option>"
+      {% endfor %}
+  </select>
+  <div><label for="currency_to_enter"><b>Enter amount to calculate</b></label></div>
+  <input type="currency_to_enter" placeholder="Enter amount to calculate" name="currency_to_enter" required>
+  <div><input type="submit" value="Calculate"></div>
+</form>
+{% endblock %}  
